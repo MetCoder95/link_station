@@ -1,8 +1,4 @@
 /**
- * The task is quite easy once you understood
- * how to calculate properly the distance between two coordinates,
- * and how to calculate the power between two coordinates.
- *
  * Steps to complete the task:
  * 1. Receive an array of coordinates and a reach [x, y, reach].
  * 2. Iterate over the array of coordinates
@@ -14,14 +10,33 @@
  * 6. If there's no maxium power return the string "No link station within reach for point x,y”".
  */
 
+/**
+ * Calculates the distance between two points in a bidimensional space.
+ * @param {Array[number, number]} point1
+ * @param {Array[number, number]} point2
+ * @returns number
+ */
 function getDistanceBetweenPoints(point1, point2) {
   return Math.sqrt(point1[0] - point2[0] ** 2 + (point1[1] - point2[1] ** 2));
 }
 
+/**
+ * Calculates the Link Station power based on reach and distance.
+ * @param {number} reach
+ * @param {number} distance
+ * @returns number
+ */
 function getLinkStationPower(reach, distance) {
   return distance > reach ? 0 : (reach - distance) ** 2;
 }
 
+/**
+ * Returns the required string based on the power and coordinates
+ * @param {number} power
+ * @param {Array[number, number]} coordinates
+ * @param {Array[number, number]} device
+ * @returns string
+ */
 function parseMessage(power, coordinates, device) {
   const [deviceX, deviceY] = device;
   if (power === 0 || coordinates == null) {

@@ -1,3 +1,8 @@
+/**
+ * Picks a random value out of an array
+ * @param {Array[any]} array
+ * @returns any
+ */
 function getRandomArrayValue(array) {
   const min = 0;
   const max = array.length;

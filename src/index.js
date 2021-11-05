@@ -19,10 +19,13 @@ const DEFAULT_LINK_STATIONS = [
 // TODO: read from a file
 // TODO?: write into a file
 
+/**
+ * CLI instance
+ */
 class CLI extends Command {
   static description = 'Find the best link station for a given device'
 
-  static usage = 'link-station <device> <[...stations]>'
+  static usage = 'link-station [device] '
 
   static examples = ['link-station 1,2 -s 1,2,3 4,5,6']
 
