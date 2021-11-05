@@ -1,0 +1,47 @@
+{
+  "name": "link_station",
+  "description": "Find the most suitable link station for a given device",
+  "version": "0.0.0",
+  "author": "Carlos Fuentes @MetCoder95",
+  "bin": {
+    "link_station": "./bin/run"
+  },
+  "bugs": "https://github.com/MetCoder95/link_station/issues",
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/errors": "^1.3.5",
+    "@oclif/plugin-help": "^3.2.3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.26.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^14.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/MetCoder95/link_station",
+  "keywords": [
+    "cli",
+    "link",
+    "link station",
+    "station"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "bin": "link_station"
+  },
+  "repository": "MetCoder95/link_station",
+  "scripts": {
+    "posttest": "eslint .",
+    "prepack": "oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
