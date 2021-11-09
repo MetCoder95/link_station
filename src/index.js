@@ -52,26 +52,26 @@ class CLI extends Command {
 
   validateDevice (device) {
     if (!device || device.length === 0) {
-      throw new Error(
-        'Device coordinates must be two values separated by a coma'
-      )
+      this.error('Device coordinates must be two values separated by a coma', {
+        exit: 1
+      })
     }
 
     device.forEach(coordinate => {
       if (isNaN(parseInt(coordinate))) {
-        throw new Error('Device coordinates must a valid number')
+        this.error('Device coordinates must be a valid number', { exit: 1 })
       }
     })
   }
 
   validateStations (stations) {
     if (!stations || stations.length < 2) {
-      throw new Error('Stations must be at least two values')
+      return this.error('Stations must be at least two values', { exit: 1 })
     }
 
     for (const [x, y, reach] of stations) {
       if (isNaN(parseInt(x)) || isNaN(parseInt(y)) || isNaN(parseInt(reach))) {
-        throw new Error('Stations coordinates must a valid number')
+        this.error('Stations coordinates must a valid number', { exit: 1 })
       }
     }
   }
@@ -84,9 +84,10 @@ class CLI extends Command {
     this.validateDevice(device);
     this.validateStations(stations);
 
+    this.log(`Finding the best link station for device ${device}, with Link Stations ${stations.join('/')}`);
     const result = getBestLinkStation(device, stations);
 
-    console.log(result);
+    this.log(result)
   }
 }
 
