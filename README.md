@@ -41,8 +41,7 @@ e.g. `link-station 1,2 -s 1,2,3 -s 4,5,6 -s 7,8,9
 ```sh-session
 $ npm install -g link_station
 $ link_station 1,2 -s 10,12,0 -s 123,0,3
-running command...
-$ link_station (-v|--version|version)
+$ Best link station for point <deviceX>,<deviceY> is <stationX>,<stationY> with power <power>
 link_station/0.0.0 darwin-arm64 node-v16.4.2
 $ link_station --help [COMMAND]
 USAGE
