@@ -36,7 +36,7 @@ e.g. `link-station 1,2`
 - stations - alias: `-s` -> The list of stations to use. Is constituted of three values separated by a comma, Y X R(Reach).
 >If not station provided, the following stations will be used instead:[0, 0, 10], [20, 20, 5], [10, 0, 12]
 
-e.g. `link-station 1,2 -s 1,2,3 -s 4,5,6 -s 7,8,9
+e.g. `link-station 1,2 -s 1,2,3 -s 4,5,6 -s 7,8,9`
 ### Example
 ```sh-session
 $ npm install -g link_station
