@@ -15,8 +15,7 @@
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1.26.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint": "^8.2.0",
     "eslint-plugin-import": "^2.25.2"
   },
   "engines": {
