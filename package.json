@@ -1,5 +1,5 @@
 {
-  "name": "@metcoder/link_station",
+  "name": "link_station",
   "description": "Find the most suitable link station for a given device",
   "version": "1.0.0-rc.0",
   "author": "Carlos Fuentes @MetCoder95",
